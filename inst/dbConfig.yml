@@ -10,11 +10,27 @@ nordummy:
 rapbase:
   host : 127.0.0.1
   name : rapbase
-  user : travis
-  pass : 
+  user : root
+  pass : root
   disp : ForTestingOnly
 
-# for testing, in rap-dev-data container
+# for logging tests with database as target
+raplog:
+  host : db
+  name : raplog
+  user : root
+  pass : root
+  disp : ForLogDevOnly
+
+# for auto report tests with database as target
+autoreport:
+  host : db
+  name : autoreport
+  user : root
+  pass : root
+  disp : ForAutoReportDevOnly
+
+# for testing, in dev container
 dev:
   host : db
   name : rapbase

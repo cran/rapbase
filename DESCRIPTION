@@ -1,8 +1,7 @@
 Package: rapbase
 Type: Package
 Title: Base Functions and Resources for Rapporteket
-Version: 1.10.0
-Date: 2019-07-23
+Version: 1.23.0
 Authors@R: c(
     person(given = "Are",
            family = "Edvardsen",
@@ -23,15 +22,17 @@ License: GPL-3
 Encoding: UTF-8
 LazyData: true
 Depends: R (>= 3.5.0)
-Imports: DBI, devtools, digest, gistr, httr, knitr, magrittr, readr,
-        RJDBC, RMariaDB, sendmailR, shiny, utils, yaml
-RoxygenNote: 6.1.1
-URL: http://github.com/Rapporteket/rapbase
-BugReports: http://github.com/Rapporteket/rapbase/issues
-Suggests: testthat
+Imports: base64enc, bookdown, DBI, digest, dplyr, DT, jsonlite,
+        kableExtra, knitr, magrittr, readr, rlang, RMariaDB, rmarkdown,
+        rpivotTable, sendmailR, shiny, shinyalert, sship (>= 0.8.0),
+        utils, yaml
+RoxygenNote: 7.1.2
+URL: https://github.com/Rapporteket/rapbase
+BugReports: https://github.com/Rapporteket/rapbase/issues
+Suggests: httptest, lifecycle, rvest, testthat
 NeedsCompilation: no
-Packaged: 2019-08-06 08:56:24 UTC; rstudio
+Packaged: 2022-08-17 12:33:38 UTC; rstudio
 Author: Are Edvardsen [aut, cre] (<https://orcid.org/0000-0002-5210-3656>),
   Kevin Otto Thon [aut]
 Repository: CRAN
-Date/Publication: 2019-08-07 07:30:02 UTC
+Date/Publication: 2022-08-17 14:20:02 UTC
