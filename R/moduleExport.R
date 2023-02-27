@@ -118,7 +118,7 @@ exportUCServer <- function(id, registryName, repoName = registryName,
         shiny::selectInput(
           shiny::NS(id, "exportKey"),
           label = shiny::tags$div(
-            shiny::HTML(as.character(shiny::icon("key")), "Velg \u00f8kkel:")
+            shiny::HTML(as.character(shiny::icon("key")), "Velg n\u00f8kkel:")
           ),
           choices = selectListPubkey(pubkey())
         )
@@ -237,7 +237,8 @@ exportDb <- function(registryName, compress = FALSE, session) {
   conf <- rapbase::getConfig()[[registryName]]
   cmd <- paste0(
     "mysqldump ",
-    "--no-tablespaces --single-transaction --add-drop-database "
+    "--no-tablespaces --single-transaction --add-drop-database ",
+    "--column-statistics=0 "
   )
   cmd <- paste0(
     cmd, "-B -u ", conf$user, " -p", conf$pass, " -h ", conf$host,
